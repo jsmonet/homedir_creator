@@ -7,4 +7,4 @@ You can also copy this file, sans extension, into your local bin dir that isn't 
 
 homedir_commented.py is just a heavily commented version of the same script. It exists solely for reference, as the other version is cleaner for real world use.
 
-I'll be looking at creating an interactive version of this script so you can run it and keep inputting usernames without having to rerun the process constantly. 
+The interactive version of this script is interactive_homedir.py. This should be a bit more user-friendly and it even thanks you when you end the program. To execute, chmod +x and sudo ./interactive_homedir.py (or whatever you end up calling it). Script does not require or parse arguments.
