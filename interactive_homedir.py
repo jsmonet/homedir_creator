@@ -11,11 +11,6 @@ def find_and_make():
         user = raw_input("Please enter the username whose homedir you wish to create:")
         try:
                 pwd.getpwnam(user)
-        except KeyError:
-                pass
-                print "User not found."
-                keep_going()
-        else:
                 org_pwnam = pwd.getpwnam(user)
                 print org_pwnam[0], "should have a home directory at", org_pwnam[5], "and a group numeral of", org_pwnam[3]
                 org_pathdir = org_pwnam[5]
@@ -29,6 +24,10 @@ def find_and_make():
                         os.makedirs(org_pathdir)
                         os.chown(org_pathdir, org_pwnam[2], org_pwnam[3])
                         keep_going()
+        except KeyError:
+                pass
+                print "User not found."
+                keep_going()
 
 def keep_going():
         yes = set(['yes', 'y', 'Y', 'Yes', 'ye', ''])
@@ -37,15 +36,13 @@ def keep_going():
         if more_answer in yes:
                 find_and_make()
         elif more_answer in no:
-                print "Thank you. Good bye."
+                print "Done."
         else:
                 print "Please say yes or no"
-                keep_going()        
+                keep_going()
 
 
 if os.getuid() is not 0:
-	print "rerun command with sudo"
+        print "rerun command with sudo"
 else:
-	find_and_make()
-
-
+        find_and_make()
