@@ -16,3 +16,7 @@ Run it, follow directions. There is a comment in the header of the file that tal
 
 but if you want to operate in a stricter environment, erase/comment out the env line (line 1) and run it with your preferred version of python:
 <pre>$ /usr/local/python-2.7.3/bin/python interactive_homedir.py</pre>
+<<<<<<< HEAD
+=======
+
+>>>>>>> 64e9a1bb00fdc78be69f31785a2cdf648770d8f6
