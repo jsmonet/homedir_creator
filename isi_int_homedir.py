@@ -39,7 +39,8 @@ def keep_going():
       keep_going()
 
 
-if os.getuid() is not 0:
-   print "rerun command with sudo"
-else:
-   find_and_make()
+#if os.getuid() is not 0:
+#   print "rerun command with sudo"
+#else:
+#   find_and_make()
+find_and_make()

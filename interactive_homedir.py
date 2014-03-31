@@ -1,8 +1,3 @@
-#!/usr/bin/env python
-# be careful with this. On systems with multiple environments, you should either change
-# this line to the specific path of your pre-3.x version of python, or erase that line 
-# and run this as 'sudo /path/to/python/2.7/or/earlier <this command>
-
 import pwd
 import sys
 import string
